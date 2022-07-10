@@ -1,10 +1,10 @@
 import React from "react";
 import { View, Image } from "react-native";
+import { SvgXml } from "react-native-svg";
 import {
   SafeArea,
   SplashScreenWrapper,
   ImageWrapper,
-  HeroImage,
   TextWrapper,
   HeroText,
   SubText,
@@ -14,6 +14,8 @@ import {
   ArrowButton,
 } from "./styles";
 import { useFonts } from "expo-font";
+import hero from '../../assets/images/hero';
+import arrowRight from '../../assets/images/arrow_right';
 
 export const SplashScreen = ({ navigation }) => {
   const [loaded] = useFonts({
@@ -30,7 +32,7 @@ export const SplashScreen = ({ navigation }) => {
       <SplashScreenWrapper>
         <View style={{ flex: 1 }}>
           <ImageWrapper>
-            <HeroImage source={require("../../assets/images/hero.png")} />
+            <SvgXml xml={hero} width={350} height={350} />
           </ImageWrapper>
           <TextWrapper>
             <HeroText>
@@ -54,7 +56,7 @@ export const SplashScreen = ({ navigation }) => {
               navigation.navigate("Account");
             }}
           >
-            <Image source={require("../../assets/images/arrow_right.png")} />
+            <SvgXml xml={arrowRight} />
           </ArrowButton>
         </CTAWrapper>
       </SplashScreenWrapper>

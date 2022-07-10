@@ -1,6 +1,10 @@
 import React from "react";
-import { Image } from "react-native";
+import { SvgXml } from "react-native-svg";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import home from "../assets/images/home";
+import wallet from "../assets/images/wallet";
+import chart from "../assets/images/chart";
+import user from "../assets/images/user";
 
 import Wallet from "../screens/wallet";
 import Savings from "../screens/savings";
@@ -10,19 +14,15 @@ import { Home } from "../screens/home";
 const Tab = createBottomTabNavigator();
 
 const tab_icons = {
-  Home: {
-    uri: require("../assets/images/nav_home.png"),
-  },
-  Wallet: {
-    uri: require("../assets/images/nav_wallet.png"),
-  },
-  Savings: { uri: require("../assets/images/nav_chart.png") },
-  Profile: { uri: require("../assets/images/nav_user.png") },
+  Home: home,
+  Wallet: wallet,
+  Savings: chart,
+  Profile: user,
 };
 
 const createScreenOptions = ({ route }) => {
   return {
-    tabBarIcon: () => <Image source={tab_icons[route.name].uri} />,
+    tabBarIcon: () => <SvgXml xml={tab_icons[route.name]} width={20} height={20} />,
   };
 };
 
@@ -39,7 +39,7 @@ export const AccountNavigator = () => {
           borderTopRightRadius: 25,
           paddingLeft: 20,
           paddingRight: 20,
-          paddingTop: 20,
+          paddingTop: 25,
           paddingBottom: 45,
         },
       }}

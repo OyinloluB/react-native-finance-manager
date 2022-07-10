@@ -9,21 +9,16 @@ export const SafeArea = styled(SafeAreaView)`
 `;
 
 export const SplashScreenWrapper = styled.View`
-  display: flex;
-  align-items: flex-start;
-  height: 100%;
-  max-width: 350px;
+display: flex;
+align-items: flex-start;
+height: 100%;
+max-width: 350px;
   padding-top: 40px;
   padding-bottom: 40px;
 `;
 
 export const ImageWrapper = styled.View`
   ${StatusBar.currentHeight && `margin-top: ${StatusBar.currentHeight}px`};
-`;
-
-export const HeroImage = styled.Image`
-  width: 350px;
-  height: 350px;
 `;
 
 export const TextWrapper = styled.View`

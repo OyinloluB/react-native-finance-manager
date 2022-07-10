@@ -6,6 +6,9 @@
     "orientation": "portrait",
     "icon": "./src/assets/images/icon.png",
     "userInterfaceStyle": "light",
+    "packagerOpts": {
+      "config": "metro.config.js"
+    },
     "splash": {
       "image": "./src/assets/images/splash.png",
       "resizeMode": "contain",

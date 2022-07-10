@@ -1,5 +1,6 @@
 import React from "react";
 import { Image } from "react-native";
+import { SvgXml } from "react-native-svg";
 import {
   TotalBalanceContainer,
   TotalBalanceCard,
@@ -11,13 +12,16 @@ import {
   WalletRouteText,
   ArrowButton,
 } from "./styles";
+import cardTopPattern from "../../assets/images/card_top_pattern";
+import cardBottomPattern from "../../assets/images/card_bottom_pattern";
+import arrowRightSmall from "../../assets/images/arrow_right_small";
 
 export const Balance = ({ navigation }) => {
   return (
     <TotalBalanceContainer>
       <TotalBalanceCard>
         <CardPatternTop
-          source={require("../../assets/images/card_top_pattern.png")}
+          xml={cardTopPattern}
         />
         <BalanceTitle>Total Balance</BalanceTitle>
         <TotalBalance>$25,000.40</TotalBalance>
@@ -28,13 +32,13 @@ export const Balance = ({ navigation }) => {
               navigation.navigate("Wallet");
             }}
           >
-            <Image
-              source={require("../../assets/images/arrow_right_small.png")}
+            <SvgXml
+              xml={arrowRightSmall}
             />
           </ArrowButton>
         </WalletRoute>
         <CardPatternBottom
-          source={require("../../assets/images/card_bottom_pattern.png")}
+          xml={cardBottomPattern}
         />
       </TotalBalanceCard>
     </TotalBalanceContainer>

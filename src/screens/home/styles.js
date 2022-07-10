@@ -4,6 +4,7 @@ import styled from "styled-components/native";
 export const SafeArea = styled(SafeAreaView)`
   display: flex;
   height: 100%;
+  ${StatusBar.currentHeight && `margin-top: ${StatusBar.currentHeight}px`};
   flex: 1;
 `;
 
@@ -25,7 +26,7 @@ export const ProfileDetails = styled.View`
 export const ProfilePicture = styled.View`
   width: 40px;
   height: 40px;
-  border-radius: 100%;
+  border-radius: 100;
   background-color: #C4C4C4;
 `;
 

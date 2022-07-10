@@ -34,7 +34,7 @@ export default function App() {
   return (
     <>
       <Navigation />
-      <StatusBar style="light" />
+      <StatusBar />
     </>
   );
 }

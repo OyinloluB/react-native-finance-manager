@@ -1,5 +1,5 @@
 import React from "react";
-import { Image } from "react-native";
+import { SvgXml } from "react-native-svg";
 import {
   SafeArea,
   GreetingsContainer,
@@ -9,7 +9,8 @@ import {
   UserName,
   Greeting,
 } from "./styles";
-import { Balance } from "../../components/card";
+import { Balance, Expenses } from "../../components/card";
+import notification from "../../assets/images/notification_bell"
 
 export const Home = ({ navigation }) => {
   return (
@@ -23,11 +24,12 @@ export const Home = ({ navigation }) => {
             <UserName>Zarror Nibros</UserName>
           </ProfileGreeting>
         </ProfileDetails>
-        <Image source={require("../../assets/images/notification_bell.png")} />
+        <SvgXml xml={notification} />
       </GreetingsContainer>
       {/* Total Balance */}
       <Balance navigation={navigation} />
       {/* Income/Outcome */}
+      <Expenses />
     </SafeArea>
   );
 };
