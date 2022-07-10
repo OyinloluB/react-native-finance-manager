@@ -15,7 +15,7 @@ import {
 } from "./styles";
 import { useFonts } from "expo-font";
 
-export const SplashScreen = () => {
+export const SplashScreen = ({ navigation }) => {
   const [loaded] = useFonts({
     RogerexRegular: require("../../assets/fonts/RogerexRegular.ttf"),
     RogerexSemiBold: require("../../assets/fonts/RogerexSemiBold.ttf"),
@@ -49,7 +49,11 @@ export const SplashScreen = () => {
             <Slide></Slide>
             <Slide></Slide>
           </Slides>
-          <ArrowButton>
+          <ArrowButton
+            onPress={() => {
+              navigation.navigate("Account");
+            }}
+          >
             <Image source={require("../../assets/images/arrow_right.png")} />
           </ArrowButton>
         </CTAWrapper>

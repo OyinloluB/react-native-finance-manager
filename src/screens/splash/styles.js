@@ -1,4 +1,4 @@
-import { SafeAreaView, StatusBar } from "react-native";
+import { SafeAreaView, StatusBar, Pressable } from "react-native";
 import styled from "styled-components/native";
 
 export const SafeArea = styled(SafeAreaView)`
@@ -68,7 +68,7 @@ export const Slide = styled.View`
   margin-right: 5px;
 `;
 
-export const ArrowButton = styled.View`
+export const ArrowButton = styled(Pressable)`
   display: flex;
   align-items: center;
   justify-content: center;
