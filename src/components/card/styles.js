@@ -1,4 +1,4 @@
-import { Pressable, FlatList } from 'react-native';
+import { Pressable } from 'react-native';
 import styled from 'styled-components/native';
 
 // Total Balance Card
@@ -11,7 +11,7 @@ export const TotalBalanceCard = styled.View`
   width: 100%;
   background: #242424;
   height: 150px;
-  border-radius: 10;
+  border-radius: 10px;
   padding: 20px 30px;
   position: relative;
 `;
@@ -66,7 +66,7 @@ export const ArrowButton = styled(Pressable)`
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 100;
+  border-radius: 100px;
   background-color: white;
   width: 32px;
   height: 32px;
@@ -171,9 +171,9 @@ export const Earning = styled.View`
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
-  background-color: ${props => props?.background};
+  background-color: ${(props) => props?.background};
   padding: 15px;
-  border-radius: 10;
+  border-radius: 10px;
   width: 120px;
   height: 130px;
   margin-right: 15px;
@@ -185,7 +185,7 @@ export const Icon = styled.View`
   justify-content: center;
   width: 28px;
   height: 28px;
-  border-radius: 100;
+  border-radius: 100px;
   background-color: rgba(255, 255, 255, 0.75);
 `;
 
@@ -210,4 +210,60 @@ export const EarningAmount = styled.Text`
   font-size: 18px;
   color: #242424;
   text-align: center;
+`;
+
+// Savings Card
+
+export const SavingsContainer = styled.View`
+  padding: 25px 25px 0;
+`;
+
+export const SavingsItem = styled.View`
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 10px 15px 15px;
+  width: 170px;
+  height: 95px;
+  flex: 1;
+  margin: 5px;
+`;
+
+export const SavingsTextContent = styled.View`
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+`;
+
+export const SavingsName = styled.Text`
+  font-family: Inter_400Regular;
+  line-height: 18px;
+  font-size: 12px;
+  color: #707070;
+`;
+
+export const SavingsAmount = styled.Text`
+  font-family: Inter_600SemiBold;
+  line-height: 22px;
+  font-size: 16px;
+  color: #242424;
+`;
+
+export const SavingsProgressBar = styled.View`
+  position: relative;
+  width: 100%;
+  height: 7px;
+  background-color: ${(props) => props?.background};
+  border-radius: 10px;
+`;
+
+export const SavingsProgressBarAfter = styled.View`
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background-color: ${(props) => props?.progressBarColor};
+  border-radius: 10px;
 `;

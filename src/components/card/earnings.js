@@ -22,6 +22,7 @@ export const Earnings = () => {
       <FlatList
         horizontal
         showsHorizontalScrollIndicator={false}
+        keyExtractor={(item, index) => index.toString()}
         data={earningsData}
         renderItem={({ item }) => (
           <Earning background={item.background}>
@@ -30,7 +31,7 @@ export const Earnings = () => {
             </Icon>
             <View>
               <EarningName>{item.name}</EarningName>
-              <EarningAmount>{item.Amount}</EarningAmount>
+              <EarningAmount>{item.amount}</EarningAmount>
             </View>
           </Earning>
         )}
@@ -43,25 +44,25 @@ const earningsData = [
   {
     name: 'Upwork',
     icon: 'U',
-    Amount: '$ 3,000',
+    amount: '$ 3,000',
     background: '#D8E5C9',
   },
   {
     name: 'Freepik',
     icon: 'F',
-    Amount: '$ 3,000',
+    amount: '$ 3,000',
     background: '#F5E9D3',
   },
   {
     name: 'Envato',
     icon: 'E',
-    Amount: '$ 2,000',
+    amount: '$ 2,000',
     background: '#E6B8D0',
   },
   {
     name: 'Fiverr',
     icon: 'F',
-    Amount: '$ 2,000',
+    amount: '$ 2,000',
     background: '#BFA2CA',
   },
 ];

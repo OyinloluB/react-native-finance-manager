@@ -5882,6 +5882,11 @@ react-native-svg@^12.3.0:
     css-select "^4.2.1"
     css-tree "^1.0.0-alpha.39"
 
+react-native-virtualized-view@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-virtualized-view/-/react-native-virtualized-view-1.0.0.tgz#fd2129f1309d1ff4b9e869d5050e803640ca64c5"
+  integrity sha512-7YyFMMkNzJ787/giGkKcm0JEx0IcLEE/XHREGz2I4K1RISQGFjEDe6iWsapOnHSR/e1vhebZJ8VmqhSpg5YPzg==
+
 react-native-web@0.17.7:
   version "0.17.7"
   resolved "https://registry.npmjs.org/react-native-web/-/react-native-web-0.17.7.tgz"
