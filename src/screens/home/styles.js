@@ -1,10 +1,11 @@
-import { SafeAreaView, StatusBar, Pressable } from "react-native";
-import styled from "styled-components/native";
+import { SafeAreaView, StatusBar } from 'react-native';
+import styled from 'styled-components/native';
 
 export const SafeArea = styled(SafeAreaView)`
   display: flex;
   height: 100%;
-  ${StatusBar.currentHeight && `margin-top: ${StatusBar.currentHeight}px`};
+  ${StatusBar.currentHeight &&
+  `margin-top: ${StatusBar.currentHeight}px`};
   flex: 1;
 `;
 
@@ -13,7 +14,7 @@ export const GreetingsContainer = styled.View`
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  padding: 0 25px;
+  padding: 25px 25px 0;
   width: 100%;
 `;
 
@@ -27,7 +28,7 @@ export const ProfilePicture = styled.View`
   width: 40px;
   height: 40px;
   border-radius: 100;
-  background-color: #C4C4C4;
+  background-color: #c4c4c4;
 `;
 
 export const ProfileGreeting = styled.View`

@@ -1,7 +1,7 @@
-import React from "react";
-import { createStackNavigator } from "@react-navigation/stack";
-import { SplashScreen } from "../screens/splash";
-import { AccountNavigator } from "./AccountNavigator";
+import React from 'react';
+import { createStackNavigator } from '@react-navigation/stack';
+import { SplashScreen } from '../screens/splash';
+import { AccountNavigator } from './AccountNavigator';
 
 const AppStack = createStackNavigator();
 

@@ -1,15 +1,15 @@
-import React from "react";
-import { SvgXml } from "react-native-svg";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import home from "../assets/images/home";
-import wallet from "../assets/images/wallet";
-import chart from "../assets/images/chart";
-import user from "../assets/images/user";
+import React from 'react';
+import { SvgXml } from 'react-native-svg';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import home from '../assets/images/home';
+import wallet from '../assets/images/wallet';
+import chart from '../assets/images/chart';
+import user from '../assets/images/user';
 
-import Wallet from "../screens/wallet";
-import Savings from "../screens/savings";
-import Profile from "../screens/profile";
-import { Home } from "../screens/home";
+import Wallet from '../screens/wallet';
+import Savings from '../screens/savings';
+import Profile from '../screens/profile';
+import { Home } from '../screens/home';
 
 const Tab = createBottomTabNavigator();
 
@@ -22,7 +22,9 @@ const tab_icons = {
 
 const createScreenOptions = ({ route }) => {
   return {
-    tabBarIcon: () => <SvgXml xml={tab_icons[route.name]} width={20} height={20} />,
+    tabBarIcon: () => (
+      <SvgXml xml={tab_icons[route.name]} width={20} height={20} />
+    ),
   };
 };
 
@@ -31,8 +33,8 @@ export const AccountNavigator = () => {
     <Tab.Navigator
       screenOptions={createScreenOptions}
       tabBarOptions={{
-        activeTintColor: "tomato",
-        inactiveTintColor: "gray",
+        activeTintColor: 'tomato',
+        inactiveTintColor: 'gray',
         showLabel: false,
         style: {
           borderTopLeftRadius: 25,

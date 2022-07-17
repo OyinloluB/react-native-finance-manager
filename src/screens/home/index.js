@@ -1,5 +1,6 @@
-import React from "react";
-import { SvgXml } from "react-native-svg";
+import React from 'react';
+import { StatusBar } from 'react-native';
+import { SvgXml } from 'react-native-svg';
 import {
   SafeArea,
   GreetingsContainer,
@@ -8,9 +9,9 @@ import {
   ProfileGreeting,
   UserName,
   Greeting,
-} from "./styles";
-import { Balance, Expenses } from "../../components/card";
-import notification from "../../assets/images/notification_bell"
+} from './styles';
+import { Balance, Expenses, Earnings } from '../../components/card';
+import notification from '../../assets/images/notification_bell';
 
 export const Home = ({ navigation }) => {
   return (
@@ -30,6 +31,9 @@ export const Home = ({ navigation }) => {
       <Balance navigation={navigation} />
       {/* Income/Outcome */}
       <Expenses />
+      {/* Earnings */}
+      <Earnings />
+      <StatusBar barStyle="dark-content" />
     </SafeArea>
   );
 };

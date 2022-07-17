@@ -1,6 +1,6 @@
-import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
-import { AppStackNavigator } from "./AppStackNavigator";
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { AppStackNavigator } from './AppStackNavigator';
 
 export const Navigation = () => {
   return (

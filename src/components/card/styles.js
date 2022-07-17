@@ -1,11 +1,10 @@
-import { Pressable } from "react-native";
-import { SvgXml } from "react-native-svg";
-import styled from "styled-components/native";
+import { Pressable, FlatList } from 'react-native';
+import styled from 'styled-components/native';
 
 // Total Balance Card
 
 export const TotalBalanceContainer = styled.View`
-  padding: 30px 25px 0;
+  padding: 20px 25px 0;
 `;
 
 export const TotalBalanceCard = styled.View`
@@ -17,18 +16,20 @@ export const TotalBalanceCard = styled.View`
   position: relative;
 `;
 
-export const CardPatternTop = styled(SvgXml)`
+export const CardPatternTop = styled.View`
   position: absolute;
   top: 0;
   right: 0;
   border-top-right-radius: 10;
+  overflow: hidden;
 `;
 
-export const CardPatternBottom = styled(SvgXml)`
+export const CardPatternBottom = styled.View`
   position: absolute;
   bottom: 0;
   left: 0;
   border-bottom-left-radius: 10;
+  overflow: hidden;
 `;
 
 export const BalanceTitle = styled.Text`
@@ -90,18 +91,20 @@ export const ExpensesCard = styled.View`
   justify-content: space-between;
 `;
 
-export const CardPatternTopSmall = styled(SvgXml)`
+export const CardPatternTopSmall = styled.View`
   position: absolute;
   top: 0;
   left: 0;
   border-top-left-radius: 10;
+  overflow: hidden;
 `;
 
-export const CardPatternBottomSmall = styled(SvgXml)`
+export const CardPatternBottomSmall = styled.View`
   position: absolute;
   bottom: 0;
   right: 0;
   border-bottom-right-radius: 10;
+  overflow: hidden;
 `;
 
 export const Expense = styled.View`
@@ -132,4 +135,79 @@ export const Divider = styled.View`
   width: 1px;
   background: #cfcfcf;
   height: 100%;
+`;
+
+// Earnings Card
+
+export const EarningsContainer = styled.View`
+  padding: 25px 25px 0;
+`;
+
+export const Header = styled.View`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+`;
+
+export const SectionName = styled.Text`
+  font-size: 20px;
+  font-family: RogerexSemiBold;
+  line-height: 26px;
+  color: #242424;
+`;
+
+export const SectionPrompt = styled.Text`
+  font-size: 14px;
+  font-family: Inter_700Bold;
+  line-height: 20px;
+  color: #489fcd;
+`;
+
+export const Earning = styled.View`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: ${props => props?.background};
+  padding: 15px;
+  border-radius: 10;
+  width: 120px;
+  height: 130px;
+  margin-right: 15px;
+`;
+
+export const Icon = styled.View`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 100;
+  background-color: rgba(255, 255, 255, 0.75);
+`;
+
+export const IconText = styled.Text`
+  font-family: Inter_700Bold;
+  line-height: 22px;
+  font-size: 16px;
+  color: #242424;
+`;
+
+export const EarningName = styled.Text`
+  font-family: Inter_400Regular;
+  line-height: 18px;
+  font-size: 12px;
+  color: #242424;
+  text-align: center;
+`;
+
+export const EarningAmount = styled.Text`
+  font-family: Inter_600SemiBold;
+  line-height: 24px;
+  font-size: 18px;
+  color: #242424;
+  text-align: center;
 `;

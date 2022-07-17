@@ -1,5 +1,5 @@
-import { SafeAreaView, StatusBar, Pressable } from "react-native";
-import styled from "styled-components/native";
+import { SafeAreaView, StatusBar, Pressable } from 'react-native';
+import styled from 'styled-components/native';
 
 export const SafeArea = styled(SafeAreaView)`
   display: flex;
@@ -9,16 +9,17 @@ export const SafeArea = styled(SafeAreaView)`
 `;
 
 export const SplashScreenWrapper = styled.View`
-display: flex;
-align-items: flex-start;
-height: 100%;
-max-width: 350px;
+  display: flex;
+  align-items: flex-start;
+  height: 100%;
+  max-width: 350px;
   padding-top: 40px;
   padding-bottom: 40px;
 `;
 
 export const ImageWrapper = styled.View`
-  ${StatusBar.currentHeight && `margin-top: ${StatusBar.currentHeight}px`};
+  ${StatusBar.currentHeight &&
+  `margin-top: ${StatusBar.currentHeight}px`};
 `;
 
 export const TextWrapper = styled.View`
@@ -57,7 +58,8 @@ export const Slides = styled.View`
 
 export const Slide = styled.View`
   border-radius: 100;
-  background-color: ${(props) => (props.active ? "white" : "#a0a0a0")};
+  background-color: ${(props) =>
+    props.active ? 'white' : '#a0a0a0'};
   width: 12px;
   height: 12px;
   margin-right: 5px;

@@ -1,6 +1,6 @@
-import React from "react";
-import { View, Image } from "react-native";
-import { SvgXml } from "react-native-svg";
+import React from 'react';
+import { View, StatusBar } from 'react-native';
+import { SvgXml } from 'react-native-svg';
 import {
   SafeArea,
   SplashScreenWrapper,
@@ -12,15 +12,15 @@ import {
   Slides,
   Slide,
   ArrowButton,
-} from "./styles";
-import { useFonts } from "expo-font";
+} from './styles';
+import { useFonts } from 'expo-font';
 import hero from '../../assets/images/hero';
 import arrowRight from '../../assets/images/arrow_right';
 
 export const SplashScreen = ({ navigation }) => {
   const [loaded] = useFonts({
-    RogerexRegular: require("../../assets/fonts/RogerexRegular.ttf"),
-    RogerexSemiBold: require("../../assets/fonts/RogerexSemiBold.ttf"),
+    RogerexRegular: require('../../assets/fonts/RogerexRegular.ttf'),
+    RogerexSemiBold: require('../../assets/fonts/RogerexSemiBold.ttf'),
   });
 
   if (!loaded) {
@@ -36,11 +36,11 @@ export const SplashScreen = ({ navigation }) => {
           </ImageWrapper>
           <TextWrapper>
             <HeroText>
-              Make It Easier{"\n"}
+              Make It Easier{'\n'}
               For You to Manage Your Finances
             </HeroText>
             <SubText>
-              Fintechy is a mobile application that can{"\n"}
+              Fintechy is a mobile application that can{'\n'}
               find simple ways to manage your finances
             </SubText>
           </TextWrapper>
@@ -53,13 +53,14 @@ export const SplashScreen = ({ navigation }) => {
           </Slides>
           <ArrowButton
             onPress={() => {
-              navigation.navigate("Account");
+              navigation.navigate('Account');
             }}
           >
             <SvgXml xml={arrowRight} />
           </ArrowButton>
         </CTAWrapper>
       </SplashScreenWrapper>
+      <StatusBar barStyle="light-content" />
     </SafeArea>
   );
 };
