@@ -57,7 +57,7 @@ export const Slides = styled.View`
 `;
 
 export const Slide = styled.View`
-  border-radius: 100;
+  border-radius: 100px;
   background-color: ${(props) =>
     props.active ? 'white' : '#a0a0a0'};
   width: 12px;
@@ -69,7 +69,7 @@ export const ArrowButton = styled(Pressable)`
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 100;
+  border-radius: 100px;
   background-color: white;
   width: 56px;
   height: 56px;

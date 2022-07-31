@@ -11,8 +11,9 @@ import {
   SavingsAmount,
   SavingsProgressBar,
   SavingsProgressBarAfter,
+  SavingsWrapper,
 } from './styles';
-import chevronRight from '../../assets/images/chevron-right';
+import chevronRight from '../../assets/images/chevron_right';
 import { View } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 
@@ -23,28 +24,30 @@ export const Savings = () => {
         <SectionName>Savings</SectionName>
         <SectionPrompt>See all</SectionPrompt>
       </Header>
-      <FlatList
-        numColumns={2}
-        data={savingsData}
-        keyExtractor={(item, index) => index.toString()}
-        renderItem={({ item }) => (
-          <SavingsItem>
-            <SavingsTextContent>
+      <SavingsWrapper>
+        <FlatList
+          numColumns={2}
+          data={savingsData}
+          keyExtractor={(item, index) => index.toString()}
+          renderItem={({ item }) => (
+            <SavingsItem>
+              <SavingsTextContent>
+                <View>
+                  <SavingsName>{item.name}</SavingsName>
+                  <SavingsAmount>{item.amount}</SavingsAmount>
+                </View>
+                <SvgXml xml={chevronRight} />
+              </SavingsTextContent>
               <View>
-                <SavingsName>{item.name}</SavingsName>
-                <SavingsAmount>{item.amount}</SavingsAmount>
+                <SavingsProgressBar background={item.background} />
+                <SavingsProgressBarAfter
+                  progressBarColor={item.progress}
+                />
               </View>
-              <SvgXml xml={chevronRight} />
-            </SavingsTextContent>
-            <View>
-              <SavingsProgressBar background={item.background} />
-              <SavingsProgressBarAfter
-                progressBarColor={item.progress}
-              />
-            </View>
-          </SavingsItem>
-        )}
-      />
+            </SavingsItem>
+          )}
+        />
+      </SavingsWrapper>
     </SavingsContainer>
   );
 };

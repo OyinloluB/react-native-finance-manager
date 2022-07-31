@@ -27,7 +27,7 @@ export const ProfileDetails = styled.View`
 export const ProfilePicture = styled.View`
   width: 40px;
   height: 40px;
-  border-radius: 100;
+  border-radius: 100px;
   background-color: #c4c4c4;
 `;
 
